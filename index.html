@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Offline Database Example</title>
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+        <!-- product add -->
+        <div class="prod-con">
+            <div class="status-con">
+                Status: <span id="status">Offline</span>
+            </div>
+            <span>
+                <center>
+                    <h3>ADD PRODUCT</h3>
+                </center>
+            </span>
+            <table id="table-product-add">
+                <tr>
+                    <td align="right">
+                        <label for="name">License plate:</label>
+                    </td>
+                    <td>
+                        <input
+                            type="text"
+                            name="name"
+                            id="license_plate"
+                            placeholder="35 ABC 531"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <label for="price">Price:</label>
+                    </td>
+                    <td>
+                        <input
+                            type="text"
+                            name="price"
+                            id="prod_price"
+                            onkeyup="handleLiveChange(event)"
+                            value="1,00"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <label for="description">Category:</label>
+                    </td>
+                    <td>
+                        <select id="prod_cat">
+                            <option value="Phone">Phone</option>
+                            <option value="Pc">Pc</option>
+                            <option value="Tablet">Tablet</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button id="btn_add">Add Product</button>
+                    </td>
+                </tr>
+            </table>
+            <span class="status-msg">
+                ** Please turn off mobile data or wifi connection and then try
+                to add product. If you are still online, your data will be saved
+                in the database.
+            </span>
+        </div>
+        <!-- indexDb -->
+        <div class="indexdb-con">
+            <span>
+                <center>
+                    <h3>INDEXDB</h3>
+                </center>
+            </span>
+            <div id="list"></div>
+            <div style="display: flex">
+                <button class="sync-button" id="btn_clear">Clear</button>
+                <button class="sync-button" id="btn_sync">Sync data</button>
+            </div>
+        </div>
+        <!-- online database -->
+        <div class="database-con">
+            <span>
+                <center>
+                    <h3>DATABASE</h3>
+                </center>
+            </span>
+            <div id="list-database"></div>
+        </div>
+        <script src="/js/jquery-3.6.0.slim.min.js"></script>
+        <script src="/js/offline.js"></script>
+    </body>
+</html>

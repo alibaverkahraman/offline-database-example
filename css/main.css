@@ -1,0 +1,54 @@
+body {
+    font-family: sans-serif;
+}
+li {
+    list-style: none;
+}
+.prod-con,
+.indexdb-con,
+.database-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.prod-con div {
+    padding: 6px;
+}
+table input[type="text"],
+select {
+    padding: 5px;
+    width: 100%;
+}
+table button {
+    padding: 8px 20px;
+}
+td {
+    padding: 5px;
+}
+.status-con {
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    padding: 5px !important;
+    margin-bottom: 10px;
+}
+
+.status-msg {
+    color: #5f5f5f;
+    font-size: 15px;
+    font-style: italic;
+    margin-top: 30px;
+    text-align: center;
+}
+.sync-button {
+    margin-top: 20px;
+    padding: 8px 16px;
+    display: none;
+    margin-right: 10px;
+}
